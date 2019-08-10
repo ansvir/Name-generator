@@ -14,4 +14,4 @@ To set values of probabilities' values to default, go to "settings" tab, push "D
 To avoid not exact result, when length of the name or surename is set to three or more, set probabilities for not more than 75%. Program creates names and surenames without triple consonants and vowels nearby, so it's impossible to generate such name as "Aaaa".
 
 **For "NameGeneration" class users**:
-to tell program take into account more or less signs after points of input values of probabilities, in the class find  method "returnRandCharOnTheBasisOfProbabilities" and set double value in the loop to preferred. At the default it's 100.0, so 10.0 means that exactness will be decreased to 0.1 from 0.01 and numbers after 0.0999... will not be taken into account.
+to tell program take into account more or less signs after points of input values of probabilities, in the class find  method "returnRandCharOnTheBasisOfProbabilities" and set double value in the loop to preferred. At the default it's 10.0, so 100.0 means that exactness will be increased to 0.01 from 0.1 and two or less signs after point will be taken into account while generating.
