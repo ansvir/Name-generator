@@ -39,6 +39,8 @@ public class GeneratorForm {
 		
 		jfrm.setLocationRelativeTo(null);
 		
+		jfrm.setResizable(false);
+		
 		//set constraints for swing components
 		c =  new GridBagConstraints();
 		
