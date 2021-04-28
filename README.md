@@ -1,6 +1,7 @@
 # Name-generator
 Simple name generator that uses random numbers, based on system nano time, and probabilities of each latin letter.
 
+Java SE without 3rd party libraries
 ## Instruction:
 1. Go to "settings" tab;
 2. Fill next two fields after "Enter maximum lengths of the name and surename." with the lengths of the name and surename, respecively (integer number);
