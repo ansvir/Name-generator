@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar -Dserver.port=8080 target/name-generator-core-1.0.jar
+web: java $JAVA_OPTS -jar -Dserver.port=8080 target/name-generator-core-1.0.jar org.itique.generator.rest.NameGeneratorForm
