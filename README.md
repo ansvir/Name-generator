@@ -1,10 +1,10 @@
-# Name-generator
+# Name-generator v1.0
 Simple name generator that uses random numbers, based on system nano time, and probabilities of each latin letter.
 
 Java SE with JavaFX integration
 
 ## Desktop version
-### Instruction:
+### Usage instruction:
 1. Go to "settings" tab;
 2. Fill next two fields after "Enter maximum lengths of the name and surname." with the lengths of the name and surname, respectively (integer number);
 3. (Optional) Check the checkbox "Generate using certain lengths" to generate names and surnames using certain lengths that were set in the previous step;
@@ -12,6 +12,14 @@ Java SE with JavaFX integration
 5. Go to "generate" tab;
 6. Push "Generate". If checkbox "Generate using certain lengths" is unchecked, names and surnames with the length from 2 to set lengths will be generated.
 To set probabilities' values to default, go to "settings" tab, push "Default" and then "Confirm".
+
+## Web Version
+### Rest V1
+
+| Path                                                                                              | Description                                                                        |
+|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
+| <code>/rest/v1/fullName/random</code>                                                             | Generates random first name and last name with limit lengths of 25 symbols         |
+| <code>/rest/v1/fullName/random/sized?nameLength={nameLength}&surnameLength={surnameLength}</code> | Generates random first and last names based on specified lengths in path variables |
 
 ## Note
 To avoid not exact result, when length of the name or surname is set to three or more, set probabilities for not more than 75%. Program creates names and surenames without triple consonants and vowels nearby, so it's impossible to generate such name as "Aaaa".
