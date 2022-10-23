@@ -1,0 +1,31 @@
+<html lang="EN">
+<head>
+    <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(() => {
+            $('#generateFullName').on('click', () => {
+                $.get("http://localhost:8080/rest/v1/fullName/random", (data, status) => {
+                    let firstName = data.firstName;
+                    let lastName = data.lastName;
+                    $("#fullNameOutput").text(`${firstName} ${lastName}`);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+<div>Here you can generate name and surname with lengths from 2 to 25 symbols.</div>
+<br>
+<div>Into consideration taken that names cannot contain miss-ordered sequence of letters, such as "Bbbbbb" or "Aaaa".
+</div>
+<br>
+<div>Names are supposed to be as realistic as possible, but futuristic.</div>
+<label for="fullNameOutput">Your full name:</label><textarea id="fullNameOutput"></textarea>
+<br>
+<br>
+<button id="generateFullName">Generate Name</button>
+</body>
+</html>
