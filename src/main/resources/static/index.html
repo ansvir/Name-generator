@@ -7,7 +7,8 @@
     <script type="text/javascript">
         $(document).ready(() => {
             $('#generateFullName').on('click', () => {
-                $.get("http://localhost:8080/rest/v1/fullName/random", (data, status) => {
+                const port = process.env.PORT || 8080
+                $.get(`http://localhost:${port}/rest/v1/fullName/random`, (data, status) => {
                     let firstName = data.firstName;
                     let lastName = data.lastName;
                     $("#fullNameOutput").text(`${firstName} ${lastName}`);
