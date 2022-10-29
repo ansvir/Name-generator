@@ -10,22 +10,42 @@
                 $.get(`https://itique-name-generator.herokuapp.com/rest/v1/fullName/random`, (data, status) => {
                     let firstName = data.firstName;
                     let lastName = data.lastName;
-                    $("#fullNameOutput").text(`${firstName} ${lastName}`);
+                    $("#firstNameOutput").text(firstName);
+                    $("#lastNameOutput").text(lastName);
                 })
             })
         })
     </script>
 </head>
-<body>
+<body style="font-family: Consolas,monaco,monospace; font-size: 25px">
+<div style="background-color: black; height: 20%; margin-bottom: 20px">
+    <table style="height: 100%; width: 100%">
+        <tbody>
+        <tr style="padding: 10px 10px 10px 10px">
+            <td>
+                <div style="background-color: white; width: 100px; height: 50%; display: flex; justify-content: start; align-items: center; font-size: 25px; float: right"
+                     id="firstNameOutput"></div>
+            </td>
+            <td style="height: 100%; text-align: left" rowspan="2">
+                <div style="background-color: white; width: 50%; height: 75%; cursor: pointer; display: flex; justify-content: center; align-items: center; font-size: 25px"
+                     id="generateFullName">Generate Name
+                </div>
+            <td rowspan="2" style="text-align: right; height: 100%"><img src="../images/logo.png" alt="Itique Company Logo"></td>
+        </tr>
+        <tr>
+            <td style="text-align: right">
+                <div style="background-color: white; width: 100px; height: 50%; display: flex; justify-content: start; align-items: center; font-size: 25px; float: right"
+                     id="lastNameOutput"></div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 <div>Here you can generate name and surname with lengths from 2 to 25 symbols.</div>
 <br>
 <div>Into consideration taken that names cannot contain miss-ordered sequence of letters, such as "Bbbbbb" or "Aaaa".
 </div>
 <br>
 <div>Names are supposed to be as realistic as possible, but futuristic.</div>
-<label for="fullNameOutput">Your full name:</label><textarea id="fullNameOutput"></textarea>
-<br>
-<br>
-<button id="generateFullName">Generate Name</button>
 </body>
 </html>
